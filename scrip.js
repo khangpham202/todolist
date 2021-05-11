@@ -41,15 +41,24 @@ $(".delete").click(function(){
   $(this).parent().remove();
 })
 $(".add-work").click(function(){ 
-    var selectedStatus = $('.Status').val();    
+    var selectedStatus = $('.Status').val();
+    var val = $(".in4").val();
+    var html_insert = '<li class="ui-state-default draggable" id="doing< sửa id ở đây >">'+val+' <button class="delete"><i class="far fa-trash-alt"></i></button></li>';
+    if(selectedStatus === 'to do')
+      html_insert = '<li class="ui-state-default draggable" id="todo< sửa id ở đây >">'+val+' <button class="delete"><i class="far fa-trash-alt"></i></button></li>';
+    
+    if(selectedStatus === 'done')
+      html_insert = '<li class="ui-state-default draggable" id="done< sửa id ở đây >">'+val+' <button class="delete"><i class="far fa-trash-alt"></i></button></li>';
+
+    
     if(selectedStatus === 'doing'){
-      $(".doing").append($(".in4").val()).attr("class","sortable droppable")
+      $(".doing").append(html_insert)
     } 
     if(selectedStatus === 'to do'){
-      $(".todo").append($(".in4").val())   
+      $(".todo").append(html_insert)
     } 
     if(selectedStatus === 'done'){
-      $(".done").append($(".in4").val())   
+      $(".done").append(html_insert) 
     } 
 });
 
