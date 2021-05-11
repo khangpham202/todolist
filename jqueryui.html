@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Todolist</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+  <style>
+  ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; }
+  li { margin: 5px; padding: 5px; width: 150px; }
+  </style>
+    <link rel="stylesheet" href="jqueryui.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+</head>
+<body>
+ <input type="text" class="in4" placeholder="Write your work">
+ <label>Select Status:</label>
+ <select name="" class="Status">
+   <option value="to do" class="status1">to do</option>
+   <option value="doing" class="status2">doing</option>
+   <option value="done">done</option>
+ </select>
+ <button class="add-work">Add</button>
+  <div class="board"> 
+    <div>
+          <ul>
+            <li id="draggable" class="ui-state-highlight">To do</li>
+          </ul>
+          <ul class="sortable droppable todo">
+            <li class="ui-state-default draggable" id='todo1'>Item 1 <button class="delete"><i class="far fa-trash-alt"></i></button></li>
+            <li class="ui-state-default draggable" id='todo2'>Item 2 <button class="delete"><i class="far fa-trash-alt"></i></button></li>
+            <li class="ui-state-default draggable" id='todo3'>Item 3 <button class="delete"><i class="far fa-trash-alt"></i></button></li>
+            <li class="ui-state-default draggable" id='todo4'>Item 4 <button class="delete"><i class="far fa-trash-alt"></i></button></li>
+            <li class="ui-state-default draggable" id='todo5'>Item 5 <button class="delete"><i class="far fa-trash-alt"></i></button></li>
+          </ul>
+    </div>
+    <div>
+          <ul>
+            <li id="draggable" class="ui-state-highlight">Doing</li>
+          </ul>
+          <ul class="sortable droppable doing"> 
+            <li class="ui-state-default draggable" id="doing1">Item 1 <button class="delete"><i class="far fa-trash-alt"></i></button></li>
+            <li class="ui-state-default draggable" id="doing2">Item 2 <button class="delete"><i class="far fa-trash-alt"></i></button></li>
+            <li class="ui-state-default draggable" id="doing3">Item 3 <button class="delete"><i class="far fa-trash-alt"></i></button></li>
+            <li class="ui-state-default draggable" id="doing4">Item 4 <button class="delete"><i class="far fa-trash-alt"></i></button></li>
+            <li class="ui-state-default draggable" id="doing5">Item 5 <button class="delete"><i class="far fa-trash-alt"></i></button></li>
+        </ul>    
+    </div>
+    <div>
+          <ul>
+            <li id="draggable" class="ui-state-highlight">Done</li>
+          </ul>
+          <ul class="sortable droppable done">
+            <li class="ui-state-default draggable">Item 1 <button class="delete"><i class="far fa-trash-alt"></i></button></li>
+            <li class="ui-state-default draggable">Item 2 <button class="delete"><i class="far fa-trash-alt"></i></button></li>
+            <li class="ui-state-default draggable">Item 3 <button class="delete"><i class="far fa-trash-alt"></i></button></li>
+            <li class="ui-state-default draggable">Item 4 <button class="delete"><i class="far fa-trash-alt"></i></button></li>
+            <li class="ui-state-default draggable">Item 5 <button class="delete"><i class="far fa-trash-alt"></i></button></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Trigger/Open The Modal -->
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <input class="update">
+    <button class="confirm">OK</button>
+  </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="./scrip.js"></script>
+</body>
+</html>
